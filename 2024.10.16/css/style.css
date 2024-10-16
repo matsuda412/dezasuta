@@ -1,0 +1,22 @@
+@charset "UTF-8";
+.nav__list{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nav__list a{
+    color: brown;
+    text-decoration: none;
+}
+
+@media screen and (max-width:767px) {
+    .nav__list{
+        flex-direction: column;
+    }
+    .nav__item a{
+        color: coral;
+    }
+}
+
