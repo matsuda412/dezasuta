@@ -2,21 +2,29 @@
 
 body,
 h1,
+h2,
+h3,
 ul,
 li,
-div{
+p {
+    margin: 0;
+    margin: 0;
     margin: 0;
     padding: 0;
-    color:black;
-    font-family: 'メイリオ', Meiryo, ヒラギノ角ゴシック ,Hiragino Sans ,Hiragino Kaku Gotiic ProN ,ヒラギノ角ゴ ProN W3;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #4c4c4c;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 
-a{
+a {
+    /*下線を消す*/
     text-decoration: none;
-    color: inherit
+    /*色を消す*/
+    color: inherit;
 }
 
-ul{
+ul {
+    /*左の「・」を消す*/
     list-style: none;
 }
-
