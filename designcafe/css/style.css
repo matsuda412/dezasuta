@@ -1,0 +1,206 @@
+@charset "UTF=8";
+.header__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2.76%;
+    padding-right: 7.28%;
+    padding-top: 15px;
+    position: absolute;
+    width: 100%;
+}
+
+.header__nav ul{
+    display: flex;
+    gap: 70px;
+}
+
+.logo{
+    width: 227px;
+}
+
+.header__nav li{
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium","Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+body{
+    background-color: #e8d9bf;
+}
+
+.wrapper{
+    max-width: 1000px;
+    margin: 100px auto;
+}
+
+.companyhope{
+    text-align: center;
+}
+
+.main_text_en{
+    font-size: 30px;
+    padding: 100px 0 60px 0;
+    font-feature-settings: "palt"
+}
+
+.main_text{
+    font-size: 82px;
+    font-weight: medium;
+    line-height: 1.17;
+    font-feature-settings: "palt"
+}
+
+.sub_text{
+    padding-top: 40px;
+    font-size: 23px;
+    line-height: 1.65;
+    font-feature-settings: "palt"
+}
+
+h3{
+    font-family: "fliped";
+    font-size: 80px;
+    color: #D30202;
+    text-align: center;
+}
+
+#about h3{
+    text-align: start;
+}
+
+.sub_tittle{
+    font-size: 44px;
+    font-weight: medium;
+    line-height: 1.39;
+    font-feature-settings: "palt";
+    padding: 50px 0 35px 0;
+}
+
+.about__inner{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.about__inner img{
+    border-bottom-right-radius: 80px;
+    width: 50%;
+    height: auto;
+}
+
+.about__text{
+    padding: 60px 0 45px 80px;
+}
+
+.about__text p{
+    line-height: 1.63;
+}
+
+.menu__inner{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.menu__inner img{
+    border-top-right-radius: 40px;
+}
+
+
+.gallery__inner{
+    display: flex;
+    padding-top: 40px;
+}
+
+.gallery__inner img{
+    width: 20%;
+}
+
+h4{
+    font-size: 38px;
+    color: #D30202;
+    font-weight: normal;
+    line-height: 0.58;
+    font-feature-settings: "palt";
+    margin-top: -7px;
+    margin-left: 15px;
+}
+
+#menu ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu li{
+    width: 32%;
+}
+
+#menu img{
+    width: 100%;
+}
+
+.event__inner{
+    background-color: white;
+    border: solid 3px black;
+    margin-top: 40px;
+}
+
+.event__inner ul{
+    padding: 40px 0 40px 16%;
+}
+
+.event__inner li{
+    display: flex;
+}
+
+.event__inner p{
+    line-height: 1.96;
+    padding-right: 5.7%;
+}
+
+.event__inner div{
+    border-bottom: 1px solid #4f260b;
+    line-height: 1.96;
+}
+
+.map{
+    height: 470px;
+    width: 100%;
+    filter: grayscale(100%) invert(92%) contrast(83%);
+    padding-top: 40px;
+}
+
+footer{
+    background-color: #ffffff;
+    height: 390px;
+}
+
+.footer_log img{
+    width: 225px;
+}
+
+.footer__inner{
+    display: flex;
+    padding: 74px 35% 74px 23%;
+}
+
+.copyright{
+    text-align: center;
+}
+
+.information p{
+    line-height: 1.95;
+    margin-left: 63px;
+}
+
+.to_top{
+    position: fixed;
+    bottom: 180px;
+    right: 180px;
+}
+
+.to_top img{
+    width: 50%;
+}
