@@ -206,3 +206,213 @@ footer{
     right: 20px;
     width: 125px;
 }
+
+.sp__nav,
+.hamburger{
+    display: none;
+}
+
+/*ハンバーガメニュー*/
+@media screen and (max-width:1000px){
+    .header__nav{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+        width: 33px;
+        height: 30px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+    .hamburger span{
+        width: 33px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        top: 13px;
+        transition: .3s;
+    }
+
+    .hamburger span::before{
+        width: 33px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        content: "";
+        top: -13px;
+        transition: .3s;
+    }
+
+    .hamburger span::after{
+        width: 33px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        content: "";
+        bottom: -13px;
+        transition: .3s;
+    }
+
+    .open span{
+        background-color: transparent;
+    }
+
+    .open span::before{
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .open span::after{
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+
+    .sp__nav{
+        background-color: #000000bd;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        z-index: 9998;
+    }
+
+    .sp__nav ul{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .sp__nav li{
+        color: #ffffff;
+        font-family: "游ゴシック体" , YuGothic, 游ゴシック;
+        font-weight: bold;
+    }
+}
+
+/*SP ブレイクポイント767px*/
+@media screen and (max-width:767px){
+    .sub_text,
+    .about__inner{
+        display: none;
+    }
+
+    .wrapper{
+        margin: 50px auto;
+    }
+
+    h3{
+        font-size: 47px;
+        align-items: center;
+    }
+
+/*companyhope*/
+    .sp__sub_text{
+        line-height: 1.88;
+        margin: 20px 20px 0 20px;
+    }
+
+    .main_text_en{
+        font-size: 17px;
+    }
+
+    .main_text{
+        font-size: 38px;
+    }
+
+/*about*/
+    .sp__about{
+        flex-direction: column;
+    }
+
+    .sub_tittle{
+        font-size: 36px;
+        padding: 20px 20px 0 20px;
+
+    }
+
+    .sp__about p{
+        font-size: 16px;
+        line-height: 1.75;
+        padding: 20px;
+    }
+
+    #about h3{
+        text-align: center;
+    }
+
+/*menu*/
+    #menu ul{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    #menu li{
+        width: 300px;
+        margin: 25px 0;
+    }
+
+    #menu .menu__inner{
+        padding-top: 0;
+    }
+
+/*event*/
+    #event p{
+        font-size: 16px;
+    }
+
+    .event__inner li{
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .event__inner div{
+        font-size: 16px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .event__inner{
+        margin: 20px;
+    }
+
+
+
+/*access*/
+    .map{
+        height: 190px;
+        width: 100%;
+        filter: grayscale(100%) invert(92%) contrast(83%);
+        padding-top: 20px;
+}
+
+/*footer*/
+    .footer__inner{
+        flex-direction: column;
+        padding: 45px 20px;
+    }
+
+    .information{
+        margin-top: 30px;
+    }
+
+    .information p{
+        font-size: 18px;
+        line-height: 1.73;
+        margin: 0;
+    }
+
+    .to_top{
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 80px;
+    }
+}
