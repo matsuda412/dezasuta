@@ -208,7 +208,8 @@ footer{
 }
 
 .sp__nav,
-.hamburger{
+.hamburger,
+.sp__about{
     display: none;
 }
 
@@ -355,12 +356,12 @@ footer{
     }
 
     #menu li{
-        width: 300px;
+        width: 100%;
         margin: 25px 0;
     }
 
     #menu .menu__inner{
-        padding-top: 0;
+        padding: 0 20px;
     }
 
 /*event*/
@@ -383,7 +384,6 @@ footer{
     .event__inner{
         margin: 20px;
     }
-
 
 
 /*access*/
