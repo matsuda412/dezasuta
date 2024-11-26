@@ -8,7 +8,17 @@
     padding-top: 15px;
     position: absolute;
     width: 100%;
+    z-index: 9997;
 }
+
+.slick-dots{
+    bottom: 5px;
+}
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before{
+    color: #ffffff
+}
+
 
 .header__nav ul{
     display: flex;
@@ -209,7 +219,8 @@ footer{
 
 .sp__nav,
 .hamburger,
-.sp__about{
+.sp__about,
+.sp__sub_text{
     display: none;
 }
 
