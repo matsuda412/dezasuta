@@ -1,0 +1,282 @@
+@charset "UTF-8";
+body{
+    background-image: url(../img_home/background.png); 
+    background-repeat: repeat;
+    display: block;
+}
+.wrapper{
+    max-width: 1000px;
+    padding: 0 20px;
+    margin: 0 auto 120px;
+}
+
+.header-inner{
+    border-width: 0 0 10px 0; /* 下だけ10px */
+    border-style: solid; /* 必須：border-imageを適用するにはスタイルが必要 */
+    border-image: url(../img_home/double_line.svg) 30 stretch; /* 画像のスライスと適用方法を指定 */
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 65px;
+    padding-right: 65px;
+    z-index: 9000
+}
+
+.logo img{
+    max-width: 150px;
+    line-height: 0;
+}
+
+.logo a{
+    display: block;
+}
+
+#header .navi{
+    display: flex;
+    align-items: center;
+}
+
+#header .navi li{
+    font-size: 18px;
+    margin-left: 40px;
+}
+
+.mainvisual{
+    height: 925px;
+}
+
+.concept{
+    background: url(../img_home/hourglass.png) no-repeat center center / cover;
+    position: relative;
+}
+
+.maintext{
+    writing-mode: vertical-lr;
+    margin-top: 135px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+}
+
+.subtext{
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    position: absolute;
+    top: 15%;
+    left: 12%;
+    line-height: 2.8;
+}
+
+#works .section-title img{
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 60px;
+}
+
+#works content{
+    margin: 0 auto;
+    bottom: 60px
+}
+
+#works .btn{
+    font-size: 48px;
+    text-align: right;
+    margin-top: 60px;
+}
+
+#service .section-title img{
+    width: 100%;
+    padding-bottom: 40px;
+    border-width: 0 0 3px 0;
+    border-style: solid;
+    border-image: url(../img_home/horizon_line.svg) 30 stretch;
+}
+
+#service .service-item{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+#service .service-item li:first-child{
+    grid-column: 1/3;
+    grid-row: 1/3;
+    padding-right: 20px;
+    border-width: 0 2px 0 0;
+    border-style: solid;
+    border-image: url(../img_home/vertical_line.svg) 30 stretch;
+}
+
+#service .service-item li:nth-child(2){
+    grid-column: 3/6;
+    grid-row: 1/2;
+    padding-left: 20px;
+    border-width: 0 0 3px 0;
+    border-style: solid;
+    border-image: url(../img_home/horizon_line.svg) 30 stretch;
+}
+
+#service .service-item li:nth-child(3){
+    grid-column: 3/6;
+    grid-row: 2/3;
+    padding-left: 20px;
+}
+
+#service .service-item h3{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#service .service-item li{
+    padding-top: 40px;
+}
+
+#service .service-item li p{
+    line-height: 2.8;
+}
+
+#about .about-container{
+    padding-top: 60px;
+    padding-left: 85px;
+    padding-right: 85px;
+    border-width: 3px 0 3px 0;
+    border-style: solid;
+    border-image: url(../img_home/horizon_line.svg) 30 stretch;
+}
+
+#about h3{
+    font-size: 86px;
+    margin-bottom: 60px;
+}
+
+#about .detail{
+    line-height: 2.8;
+    margin-bottom: 60px;
+}
+
+#about .profile-container li p{
+    line-height: 2.8;
+}
+
+#about .profile-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+#about .profile-container li:first-child{
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+#about .profile-container li:nth-child(2){
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+
+#about .profile-container li:nth-child(3){
+    grid-column: 4/6;
+    grid-row: 1/3;
+}
+
+#skill{
+    display: flex;
+}
+
+#skill .title{
+    margin-right: 60px;
+}
+
+#skill .title h3{
+    font-size: 40px;
+    text-align: start;
+}
+
+#skill .skill-list ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#skill .skill-list li{
+    font-size: 28px;
+    text-align: center;
+    width: 130px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tool{
+    display: flex;
+}
+
+#tool .title{
+    margin-right: 50px;
+}
+
+#tool .title h3{
+    font-size: 40px;
+    text-align: start;
+}
+
+#tool .tool-list ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#tool .tool-list li{
+    font-size: 28px;
+    text-align: center;
+    width: 130px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact{
+    border-width: 10px 0 0 0; /* 上だけ10px */
+    border-style: solid; /* 必須：border-imageを適用するにはスタイルが必要 */
+    border-image: url(../img_home/double_line.svg) 30 stretch; /* 画像のスライスと適用方法を指定 */
+}
+
+#contact h2{
+    font-size: 127px;
+    text-align: center;
+    margin: 60px 0 60px 0;
+}
+
+#contact p{
+    text-align: center;
+    margin-bottom: 60px;
+    line-height: 1.87;
+}
+
+#footer .footer-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    border-width: 10px 0 0 0; /* 上だけ10px */
+    border-style: solid; /* 必須：border-imageを適用するにはスタイルが必要 */
+    border-image: url(../img_home/double_line.svg) 30 stretch; /* 画像のスライスと適用方法を指定 */
+}
+
+#footer .navi{
+    display: flex;
+    align-items: center;
+}
+
+#footer .navi li{
+    font-size: 18px;
+    margin-left: 40px;
+}
+
+#footer p{
+    text-align: center;
+    margin-top: 140px;
+    margin-bottom: 60px;
+}

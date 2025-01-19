@@ -328,6 +328,7 @@ footer{
     .sp__sub_text{
         line-height: 1.88;
         margin: 20px 20px 0 20px;
+        display: block;
     }
 
     .main_text_en{
