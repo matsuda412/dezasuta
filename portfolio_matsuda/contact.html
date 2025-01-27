@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="制作のご依頼・ご相談はお問い合わせフォームよりお願いいたします。"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT|CHRONO Design Studio</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="img_home/favicon.png">
+    <script>
+        (function(d) {
+        var config = {
+            kitId: 'pjr2slb',
+            scriptTimeout: 3000,
+            async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-inner">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="img_home/logo_chrono.png" alt="CHRONO Design Studio">
+                </a>
+            </h1>
+            <nav>
+                <ul class="navi">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="works.html">WORKS</a></li>
+                    <li><a href="index.html#service">SERVICE</a></li>
+                    <li><a href="index.html#about">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="contact-page" class="wrapper">
+        <div class="contact-area">
+            <p>ご相談は無料です。お気軽にお問い合わせください。<br>
+                遠方の方は、zoomを使ってお話を伺いますので、全国対応可能です。</p>
+            <form class="c-form">
+                <div class="c-form__item">
+                    <label class="c-form__label" for="field-name">お名前<span class="c-form__required">*</span></label>
+                    <input
+                        class="c-form__input"
+                        id="field-name"
+                        placeholder=""
+                        type="text"
+                        required="required"/>
+                </div>
+                <div class="c-form__item">
+                    <label class="c-form__label" for="field-name">会社名・屋号<span class="c-form__required">*</span></label>
+                    <input
+                        class="c-form__input"
+                        id="field-name"
+                        placeholder="個人の方、屋号のない方は「なし」とご入力ください。"
+                        type="text"
+                        required="required"/>
+                </div>
+                <div class="c-form__item">
+                    <label class="c-form__label" for="field-mail">メールアドレス<span class="c-form__required">*</span></label>
+                    <input
+                        class="c-form__input"
+                        id="field-mail"
+                        placeholder=""
+                        type="email"
+                        required="required"/>
+                </div>
+                <div class="c-form__item">
+                    <label class="c-form__label" for="field-message">メッセージ内容<span class="c-form__required">*</span></label>
+                    <textarea
+                        class="c-form__input"
+                        id="field-message"
+                        placeholder=""
+                        required="required">
+                    </textarea>
+                </div>
+                <div class="c-form__submit">
+                    <button type="submit">送信する</button>
+                </div>
+            </form>
+        </div>
+        <div class="cotact-tittle">
+            <img src="img_home/contact.png">
+        </div>
+    </section>
