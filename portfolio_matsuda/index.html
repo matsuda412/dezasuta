@@ -18,6 +18,7 @@
         h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -37,6 +38,18 @@
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </nav>
+            <div class="hamburger">
+                <span>MENU</span>
+            </div>
+            <nav class="sp__nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="works.html">WORKS</a></li>
+                    <li><a href="index.html#service">SERVICE</a></li>
+                    <li><a href="index.html#about">ABOUT</a></li>
+                    <li><a href="contact.html">ACCESS</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <section id="mainvisual" style="height: 100vh;">
@@ -50,7 +63,10 @@
             <img src="img_home/works.png" alt="works">
         </h2>
         <div class="content">
-            <img src="img_home/works_top.png" alt="制作実績集">
+            <picture>
+                <source srcset="./img_home/works_top_SP.png" media="(max-width :767px)" style="width: 100vw;">
+                <img src="img_home/works_top.webp" alt="制作実績集">
+            </picture>
         </div>
         <div class="btn">
             <a href="works.html">view more</a>
@@ -156,7 +172,7 @@
                     <li><a href="#service">SERVICE</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="https://www.instagram.com/yoshiko_design_support/" >
-                        <img src="img_home/instagram.png" alt="Instagram"></a>
+                        <img src="img_home/instagram.webp" alt="Instagram"></a>
                     </li>
                 </ul>
             </nav>
@@ -166,5 +182,13 @@
     <div class="to-top">
         <a href="#header">TOP</a>
     </div>
+    <script>
+        $(function(){
+            $('.hamburger').click(function(){
+                $('.sp__nav').fadeToggle();
+                $('.hamburger').toggleClass('open');
+            });
+        });
+    </script>
 </body>
 </html>

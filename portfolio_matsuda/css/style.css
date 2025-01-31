@@ -42,13 +42,19 @@ body{
     margin-left: 40px;
 }
 
+#header .hamburger,
+.sp__nav{
+    display: none;
+}
+
+
 .concept{
     background: url(../img_home/hourglass.png) no-repeat center center / 100% 100%;
     position: relative;
     height: 95%;
 }
 
-.maintext{
+#mainvisual .maintext{
     writing-mode: vertical-lr;
     margin-top: 135px;
     margin-left: auto;
@@ -57,7 +63,7 @@ body{
     letter-spacing: 0.1em;
 }
 
-.subtext{
+#mainvisual .subtext{
     font-size: 16px;
     letter-spacing: 0.05em;
     position: absolute;
@@ -410,6 +416,10 @@ body{
     margin-left: 40px;
 }
 
+#footer .navi img{
+    width: 20px;
+}
+
 #footer p{
     text-align: center;
     margin-top: 140px;
@@ -473,8 +483,10 @@ body{
 }
 
 #works-list .box img{
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    object-fit: contain;
+    height: 210px;
+    width: 280px;
 }
 
 #works-list .tab{
@@ -511,8 +523,7 @@ body{
     right: 0;
 }
 
-/*これが違う？右端の縦線を消したい
-#works-list li:nth-child(3n){
+#works-list li:nth-child(3n):before{
     background-image: none;
 }
 
@@ -603,6 +614,11 @@ td{
     display: flex;
     justify-content: space-between;
     margin-top: 120px;
+    gap: 20px;
+}
+
+.contact-tittle-SP{
+    display: none;
 }
 
 .contact-area p{
@@ -623,7 +639,10 @@ td{
 	margin-bottom: 60px;
 }
 
-#field-name{
+input#field-name,
+input#field-mail,
+textarea#field-message {
+    box-sizing: border-box;
     font-size: 15px;
     font-family: 'Noto Serif JP', '游明朝体', 'ヒラギノ明朝 Pro', 'Garamond', 'Georgia', serif;
 }
@@ -660,18 +679,201 @@ textarea.c-form__input {
 	height: 160px;
 }
 
+.c-form__submit {
+    display: block;
+    font-size: 20px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.contact-btn {
+    position: relative;
+}
+
+.contact-btn::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 2px;
+    background: #41403c;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contact-btn::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #b81905;
+    border-radius: 50%;
+    left: -36px;
+    top: 31px;
+    transition: 0.7s;
+    transition-timing-function: ease-in-out;
+}
+
+.contact-btn:hover::after {
+    left: 100px;
+}
+
+/*thanksページ*/
+#thanks{
+    height: 50vh;
+}
+
+.thanks-box{
+    margin-top: 120px;
+}
+
+.thanks-box .tittle{
+    font-size: 72px;
+    color: #B81905;
+    margin: 0 auto;
+}
+
+.thanks-box p{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    line-height: 1.87;
+}
+
+/*TB ブレイクポイント1000px*/
+@media (max-width: 1000px) {
+    #mainvisual .maintext{
+        position: relative;
+    }
+    #mainvisual .subtext{
+        writing-mode: vertical-lr;
+        position: absolute;
+        top: 0;
+        left: 30%;
+        line-height: 2.0;
+    }
+    #works-list ul{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    #works-list li:nth-child(2n):before{
+        background-image: none;
+    }
+    #works-list .box img{
+        display: grid;
+        object-fit: contain;
+        height: 210px;
+        width: 350px;
+    }
+}
 
 
+/*SP ブレイクポイント767px*/
+@media (max-width: 767px) {
+	#header nav,
+    #footer nav{
+        display: none;
+    }
 
+/*ハンバーガーメニュー*/
+    .hamburger{
+        cursor: pointer;
+        position: fixed;
+    }
+    .hamburger span{
+        font-size: 12px;
+    }
 
-@media (max-width: 667px) {
-	.c-form__item {
+    .sp__nav{
+        background-image: url(../img_home/SP_menu_background.webp);
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        z-index: 9998;
+    }
+
+    .sp__nav ul{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 60px;
+    }
+
+    .sp__nav li{
+        color: #ECE4D1;
+        font-size: 22px;
+    }
+
+/*service section*/
+    #service .section-title img{
+        border-style: none;
+    }
+    #service .service-item{
+        display: flex;
+        flex-direction: column;
+    }
+    #service .service-item li{
+        padding: 40px 20px;
+    }
+    #service .service-item li:first-child{
+        border-style: none;
+    }
+    #service .service-item li:nth-child(2){
+        border-style: none;
+    }
+    #service .service-item li:nth-child(3){
+        border-style: none;
+    }
+    #service .service-item li h3{
+        border-width: 0 0 4px 0;
+        border-style: solid;
+        border-image: url(../img_home/horizon_line.svg) 30 stretch;
+        padding-bottom: 20px;
+    }
+
+/*about section*/
+    #about .about-container {
+        padding-top: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-width: 4px 0 4px 0;
+        border-style: solid;
+        border-image: url(../img_home/horizon_line.svg) 30 stretch;
+        position: relative;
+    }
+
+/*works page*/
+    #works-list ul{
+        display: flex;
+        flex-direction: column;
+    }
+    #works-list .box img{
+        display: grid;
+        object-fit: contain;
+        height: 210px;
+        width: 280px;
+    }
+
+/*contact page*/
+    .c-form__item {
 		flex-wrap: nowrap;
 	}
-	.c-form__label {
-		width: 40%;
-	}
-	.c-form__input {
-		width: 55%;
-	}
+    .contact-tittle-SP{
+        display: block;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .cotact-tittle{
+        display: none;
+    }
+
+/*footer*/
+    #footer .footer-inner .logo{
+        margin: 0 auto;
+    }
+    #footer p{
+        margin-top: 60px;
+    }
 }

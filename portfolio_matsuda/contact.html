@@ -18,6 +18,15 @@
         h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
     </script>
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe
+        name="hidden_iframe"
+        id="hidden_iframe"
+        style="display: none"
+        onload="if(submitted){window.location='thanks.html';}"
+    ></iframe>
 </head>
 
 <body>
@@ -41,12 +50,25 @@
     </header>
     <section id="contact-page" class="wrapper">
         <div class="contact-area">
+            <div class="contact-tittle-SP">
+                <img src="./img_home/contact_SP.webp">
+            </div>
             <p>ご相談は無料です。お気軽にお問い合わせください。<br>
                 遠方の方は、zoomを使ってお話を伺いますので、全国対応可能です。</p>
+            <form
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScGGGDpIR7lZuCST1mt2ASIUyV3r3lKVSU9u0JDx0Ws5ds26w/formResponse"
+                method="POST">
+            <form
+                action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSe00eJN0CWayVTtmGW0ONrc6MT8bA5no3F9iHgbGwaOm18KRw/formResponse"
+                method="POST"
+                target="hidden_iframe"
+                onsubmit="submitted=true;"
+                class="c-form">
             <form class="c-form">
                 <div class="c-form__item">
                     <label class="c-form__label" for="field-name">お名前<span class="c-form__required">*</span></label>
                     <input
+                        name="entry.1267704911"
                         class="c-form__input"
                         id="field-name"
                         placeholder=""
@@ -56,6 +78,7 @@
                 <div class="c-form__item">
                     <label class="c-form__label" for="field-name">会社名・屋号<span class="c-form__required">*</span></label>
                     <input
+                        name="entry.683752617"
                         class="c-form__input"
                         id="field-name"
                         placeholder="個人の方、屋号のない方は「なし」とご入力ください。"
@@ -65,6 +88,7 @@
                 <div class="c-form__item">
                     <label class="c-form__label" for="field-mail">メールアドレス<span class="c-form__required">*</span></label>
                     <input
+                        name="entry.2124010032"
                         class="c-form__input"
                         id="field-mail"
                         placeholder=""
@@ -74,6 +98,7 @@
                 <div class="c-form__item">
                     <label class="c-form__label" for="field-message">メッセージ内容<span class="c-form__required">*</span></label>
                     <textarea
+                        name="entry.306193103"
                         class="c-form__input"
                         id="field-message"
                         placeholder=""
@@ -81,7 +106,7 @@
                     </textarea>
                 </div>
                 <div class="c-form__submit">
-                    <button type="submit">送信する</button>
+                    <button class="contact-btn" type="submit">送信する</button>
                 </div>
             </form>
         </div>
@@ -89,3 +114,29 @@
             <img src="img_home/contact.png">
         </div>
     </section>
+    <section id="footer">
+        <div class="footer-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img_home/logo_chrono.png" alt="CHRONO Design Studio">
+                </a>
+            </div>
+            <nav>
+                <ul class="navi">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="works.html">WORKS</a></li>
+                    <li><a href="index.html#service">SERVICE</a></li>
+                    <li><a href="index.html#about">ABOUT</a></li>
+                    <li><a href="https://www.instagram.com/yoshiko_design_support/" >
+                        <img src="img_home/instagram.webp" alt="Instagram"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <p>©︎2025 CHORONO DesignStudio</p>
+    </section>
+    <div class="to-top">
+        <a href="#header">TOP</a>
+    </div>
+</body>
+</html>
