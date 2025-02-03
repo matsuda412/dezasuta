@@ -27,7 +27,7 @@ body{
     height: 1px;
 }
 
-shutter {
+.shutter {
     -webkit-animation: byeShutter 2.6s forwards;
             animation: byeShutter 2.6s forwards;
 }
@@ -745,7 +745,7 @@ textarea#field-message {
 }
 
 .c-form__input:focus-visible {
-	outline: #b81905 auto 1px;
+	outline: #41403c auto 1px;
 }
 
 .c-form__required {
