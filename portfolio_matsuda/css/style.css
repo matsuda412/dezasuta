@@ -28,18 +28,23 @@ body{
 }
 
 .shutter {
-    -webkit-animation: byeShutter 2.6s forwards;
-            animation: byeShutter 2.6s forwards;
+    -webkit-animation: byeShutter 2.8s forwards;
+            animation: byeShutter 2.8s forwards;
 }
 
 .shutter::before {
-    -webkit-animation: shutterOpen 2.6s forwards;
-            animation: shutterOpen 2.6s forwards;
+    -webkit-animation: shutterOpen 2.8s forwards;
+            animation: shutterOpen 2.8s forwards;
 }
 
-.content{
-    -webkit-animation: contentScale 2.6s forwards;
-            animation: contentScale 2.6s forwards;
+.shutter.is-active {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.shutter-animation .is-active {
+    opacity: 1;
+    visibility: visible;
 }
 
 @keyframes byeShutter {
@@ -122,6 +127,11 @@ body{
     margin-left: 40px;
 }
 
+#header .navi li :hover{
+    color: #B81905;
+    opacity: 1.0;
+}
+
 .hamburger,
 .sp__nav{
     display: none;
@@ -133,22 +143,58 @@ body{
     height: 95%;
 }
 
+.concept::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img_home/background.png); 
+    z-index: -1;
+    top: 74%;
+}
+
+.concept::after{
+    position: absolute;
+    content: "";
+    width: 47%;
+    height: 100vh;
+    background-image: url(../img_home/background.png); 
+    z-index: -1;
+    top: 41%;
+    left: 0;
+}
+
+.maintext .anime{
+    display: none;
+}
+
+.subtext .anime{
+    display: none;
+}
+
 #mainvisual .maintext{
     writing-mode: vertical-lr;
-    margin-top: 135px;
+    margin-top: 110px;
     margin-left: auto;
     margin-right: auto;
     font-size: 40px;
     letter-spacing: 0.1em;
+    position: fixed;
+    left: 50%;
+    z-index: -2;
+    transform: translateX(-50%);
 }
 
 #mainvisual .subtext{
     font-size: 16px;
     letter-spacing: 0.05em;
-    position: absolute;
-    top: 15%;
+    top: 30%;
     left: 12%;
     line-height: 2.8;
+    position: fixed;
+    left: 30%;
+    z-index: -2;
+    transform: translateX(-50%);
 }
 
 #works .section-title img{
@@ -166,6 +212,11 @@ body{
     font-size: 48px;
     text-align: right;
     margin-top: 60px;
+}
+
+#works .btn a:hover{
+    color: #B81905;
+    opacity: 1.0;
 }
 
 #works .btn a{
@@ -198,7 +249,6 @@ body{
 #works .btn a:hover::after{
     left:-27px
 }
-
 
 #service .section-title img{
     width: 100%;
@@ -281,7 +331,7 @@ body{
 }
 
 #about h3{
-    font-size: 86px;
+    font-size: clamp(50px, 10vw, 86px);
     margin-bottom: 60px;
 }
 
@@ -323,7 +373,7 @@ body{
 }
 
 #skill .title h3{
-    font-size: 40px;
+    font-size: clamp(30px,4vw,40px);
     text-align: start;
 }
 
@@ -334,7 +384,7 @@ body{
 }
 
 #skill .skill-list li{
-    font-size: 28px;
+    font-size: clamp(20px, 4vw, 28px);
     text-align: center;
     width: 135px;
     height: 35px;
@@ -371,7 +421,7 @@ body{
 }
 
 #tool .title h3{
-    font-size: 40px;
+    font-size: clamp(30px,4vw,40px);
     text-align: start;
 }
 
@@ -382,7 +432,7 @@ body{
 }
 
 #tool .tool-list li{
-    font-size: 28px;
+    font-size: clamp(20px, 4vw, 28px);
     text-align: center;
     width: 135px;
     height: 35px;
@@ -420,13 +470,16 @@ body{
     position: absolute;
     content: "";
     background: #41403c;
-    width: 655px;
+    max-width: 655px;
+    width: 100%;
     height: 3px;
     top: -62px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #contact h2{
-    font-size: 127px;
+    font-size: clamp(24px, 18vw, 127px);
     text-align: center;
     margin: 60px 0 60px 0;
     position: relative;
@@ -435,6 +488,11 @@ body{
 #contact p{
     text-align: center;
     line-height: 1.87;
+}
+
+#contact .btn a:hover{
+    color: #b81905;
+    opacity: 1.0;
 }
 
 #contact .btn{
@@ -495,6 +553,12 @@ body{
     margin-left: 40px;
 }
 
+#footer .navi li :hover{
+    color: #B81905;
+    opacity: 1.0;
+}
+
+
 #footer .navi img{
     width: 20px;
 }
@@ -515,10 +579,15 @@ body{
     writing-mode: vertical-lr;
 }
 
+.to-top a:hover{
+    color: #B81905;
+    opacity: 1.0;
+}
+
 .to-top a::before{
     position: absolute;
     content: "";
-    width: 2px;
+    width: 1.5px;
     height: 50px;
     background: #41403c;
     top: -62px;
@@ -533,13 +602,13 @@ body{
     background: #B81905;
     border-radius: 50%;
     top: -25px;
-    left: 3px;
+    left: 2.5px;
     transition: .7s;
     transition-timing-function: ease-in-out;
 }
 
 .to-top a:hover::after{
-    top: -59px
+    top: -59px;
 }
 
 /*worksページ*/
@@ -659,6 +728,11 @@ td{
 
 .btn-back a{
     position: relative;
+}
+
+.btn-back a:hover{
+    color: #B81905;
+    opacity: 1.0;
 }
 
 .btn-back a::before{
@@ -820,18 +894,36 @@ textarea.c-form__input {
     line-height: 1.87;
 }
 
+
 /*TB ブレイクポイント1000px*/
 @media (max-width: 1000px) {
     #mainvisual .maintext{
-        position: relative;
+        position: fixed;
+        left: 50%;
+        z-index: -2;
+        transform: translateX(-50%);
+        top: 5%;
     }
+
     #mainvisual .subtext{
         writing-mode: vertical-lr;
-        position: absolute;
-        top: 0;
+        position: fixed;
+        top: 18%;
         left: 30%;
         line-height: 2.0;
     }
+
+    .concept::after{
+        position: absolute;
+        content: "";
+        width: 45%;
+        height: 100vh;
+        background-image: url(../img_home/background.png); 
+        z-index: -1;
+        top: 53%;
+        left: 0;
+    }
+
     #works-list ul{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -870,16 +962,30 @@ textarea.c-form__input {
         position: fixed;
         display: block !important;
         right: 4.8%;
+        z-index: 9999;
     }
     .hamburger span{
-        font-size: 14px;
+        font-size: 16px;
+    }
+    .hamburger-close{
+        display: none;
+    }
+    .hamburger.open .hamburger-close{
+        display: block;
+        color: #ECE4D1
+    }
+    .hamburger.open .hamburger-menu{
+        display: none;
     }
     .sp__nav{
-        background-image: url(../img_home/SP_menu_background.webp);
+        background-image: url(../img_home/SP_memu_background.webp);
+        background-position: center;
         position: absolute;
         width: 100%;
         height: 100vh;
         z-index: 9998;
+        top: 0;
+        left: 0;
     }   
     .sp__nav ul{
         height: 100%;
@@ -887,12 +993,49 @@ textarea.c-form__input {
         flex-direction: column;
         justify-content: center;
         text-align: right;
-        gap: 60px;
+        width: 40%;
     }   
     .sp__nav li{
         color: #ECE4D1;
         font-size: 22px;
+        border-bottom: solid 1px #ECE4D1;
+        padding: 30px 0;
+        position: relative;
     }
+    .instagram{
+        position: absolute;
+        width: 30px;
+        right: 10vw;
+        bottom: 26vh;
+    }
+/*mainvisual*/
+    #mainvisual .maintext{
+        position: fixed;
+        left: 50%;
+        z-index: -2;
+        transform: translateX(-50%);
+        top: 5%;
+    }
+
+    #mainvisual .subtext{
+        writing-mode: vertical-lr;
+        position: fixed;
+        top: 18%;
+        left: 30%;
+        line-height: 2.0;
+    }
+
+    .concept::after{
+        position: absolute;
+        content: "";
+        width: 45%;
+        height: 100vh;
+        background-image: url(../img_home/background.png); 
+        z-index: -1;
+        top: 53%;
+        left: 0;
+    }
+}
 
 /*service section*/
     #service .section-title img{
@@ -974,4 +1117,3 @@ textarea.c-form__input {
     #footer p{
         margin-top: 60px;
     }
-}

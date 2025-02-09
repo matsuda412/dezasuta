@@ -22,42 +22,47 @@
 </head>
 <body>
     <div class="shutter"></div>
-    <header id="header">
-        <div class="header-inner">
-            <h1 class="logo">
-                <a href="index.html">
-                    <img src="img_home/logo_chrono.png" alt="CHRONO Design Studio">
-                </a>
-            </h1>
-            <nav>
-                <ul class="navi">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="works.html">WORKS</a></li> 
-                    <li><a href="#service">SERVICE</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-            <div class="hamburger">
-                <span>MENU</span>
+        <header id="header">
+            <div class="header-inner">
+                <h1 class="logo">
+                    <a href="index.html">
+                        <img src="img_home/logo_chrono.png" alt="CHRONO Design Studio">
+                    </a>
+                </h1>
+                <nav>
+                    <ul class="navi">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="works.html">WORKS</a></li> 
+                        <li><a href="#service">SERVICE</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger">
+                    <span class="hamburger-menu">MENU</span>
+                    <span class="hamburger-close">× CLOSE</span>
+                </div>
+                <nav class="sp__nav">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="works.html">WORKS</a></li>
+                        <li><a href="index.html#service">SERVICE</a></li>
+                        <li><a href="index.html#about">ABOUT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                    <div class="instagram">
+                        <a href="https://www.instagram.com/yoshiko_design_support/" >
+                            <img src="img_home/instagram_white.webp" alt="Instagram"></a>
+                    </div>
+                </nav>
             </div>
-            <nav class="sp__nav">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="works.html">WORKS</a></li>
-                    <li><a href="index.html#service">SERVICE</a></li>
-                    <li><a href="index.html#about">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section id="mainvisual" style="height: 100vh;">
-        <div class="concept">
-            <p class="maintext">時間は有限、だからこそ。</p>
-            <p class="subtext">デザインの力で想いを形に<br>お客様の大切な時間を生み出すお手伝いをします</p>
-        </div>
-    </section>
+        </header>
+        <section id="mainvisual" style="height: 100vh;">
+            <div class="concept">
+                <p class="maintext">時間は有限、だからこそ。</p>
+                <p class="subtext">デザインの力で想いを形に<br>お客様の大切な時間を生み出すお手伝いをします</p>
+            </div>
+        </section>
     <section id="works" class="wrapper">
         <h2 class="section-title">
             <img src="img_home/works.png" alt="works">
@@ -189,6 +194,34 @@
                 $('.hamburger').toggleClass('open');
             });
         });
+        $(function () {
+            var webStorage = function () {
+                if (sessionStorage.getItem('access')) {
+    /*2回目以降アクセス時の処理*/
+                    $(".shutter").addClass('is-active');
+                } else {
+    /*初回アクセス時の処理*/
+                    sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
+                    $(".shutter-animation").addClass('is-active'); // loadingアニメーションを表示
+                }
+            }               
+            webStorage();
+        });
+    /*conceptの表示・非表示*/
+        $(function() {
+            var elem = $(".maintext");  // 変化させる要素
+            var elemO = elem.offset().top;  // ページトップからの要素の高さ
+            var elemH = elem.height();   // 変化させる要素の高さ
+            var windowH = $(window).height();  // ウィンドウの高さ
+            $(window).on("scroll", function() {
+                var windowS = $(window).scrollTop();  // スクロールした値
+                if(windowS > elemO - windowH + (windowH / 2) && windowS < elemO + elemH - (elemH / 2)){    // 要素が半分見えたら表示して、要素がウィンドウから半分消えたら非表示にする
+                    elem.addClass("anime");
+                } else {
+                    elem.removeClass("anime");
+                }
+        });
+});
     </script>
 </body>
 </html>
